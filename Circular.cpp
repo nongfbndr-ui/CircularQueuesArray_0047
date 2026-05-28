@@ -84,4 +84,38 @@ public:
             return;
         }
 
-        
+        cout << "Elements in the queue are...\n";
+
+        // jika FRONT <= REAR, iterasi dari posisi FRONT hingga REAR
+        if (FRONT_Position <= REAR_Position)
+        {
+            while (FRONT_Position <= REAR_Position)
+            {
+                cout << queue_array[FRONT_Position] << " ";
+                FRONT_Position++;
+            }
+
+            cout << endl;
+        }
+        else
+        {
+            // jika FRONT <= REAR, iterasi dari posisi FRONT hingga akhir array
+            while (FRONT_Position <= max - 1)
+            {
+                cout << queue_array[FRONT_Position] << " ";
+                FRONT_Position++;
+            }
+
+            FRONT_Position = 0;
+
+            // iterasi dari awal array hingga posisi REAR
+            while (FRONT_Position <= REAR_Position)
+            {
+                cout << queue_array[FRONT_Position] << " ";
+                FRONT_Position++;
+            }
+            cout << endl;
+        }
+    }
+};
+
